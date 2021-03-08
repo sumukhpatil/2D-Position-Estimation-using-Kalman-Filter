@@ -52,6 +52,8 @@ The LASER range scanner used in this case is a Hokuyo UAM-05LP-T301. The LASER r
 ## Build Instructions
 ### Ubuntu
 ```bash
+git clone https://github.com/sumukhpatil/2D-Position-Estimation-using-Kalman-Filter.git
+cd 2D-Position-Estimation-using-Kalman-Filter
 mkdir build && cd build
 cmake ..
 make
