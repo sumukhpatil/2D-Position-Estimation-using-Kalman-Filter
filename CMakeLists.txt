@@ -9,19 +9,4 @@ set(CMAKE_CXX_FLAGS "${CXX_FLAGS}")
 
 set(sources src/main.cpp src/tracking.cpp src/kalman_filter.cpp src/tracking.h src/kalman_filter.h)
 
-
-if(${CMAKE_SYSTEM_NAME} MATCHES "Darwin") 
-
-include_directories(/usr/local/include)
-include_directories(/usr/local/opt/openssl/include)
-link_directories(/usr/local/lib)
-link_directories(/usr/local/opt/openssl/lib)
-link_directories(/usr/local/Cellar/libuv/1*/lib)
-
-endif(${CMAKE_SYSTEM_NAME} MATCHES "Darwin") 
-
-
 add_executable(KF_Tracking ${sources})
-
-target_link_libraries(KF_Tracking z ssl uv uWS)
-
